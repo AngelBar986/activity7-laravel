@@ -59,25 +59,10 @@ Archivos utilizados:
 
 ---
 
-## 📌 4. Diagrama ER (Instrucciones para subir tu imagen)
+## 📌 4. Diagrama ER 
 
-La tarea solicita **incluir el diagrama ER**, por lo que **debes generar la imagen en tu computadora** y luego subirla al repositorio o insertarla en este README.
+![Diagrama ER de Tarea 6](Diagrama%20ER%20Tarea6.png)
 
-### 📷 Cómo insertar la imagen en este archivo
-1. Genera el diagrama ER (puedo ayudarte si quieres).  
-2. Guarda la imagen como:  
-   **`ERD_Homework6.png`**  
-3. En GitHub, súbela a la carpeta raíz del proyecto o dentro de `/docs`.  
-4. Luego edita este README y agrega esta línea donde se mostrará:
-
-```
-![Diagrama ER](ERD_Homework6.png)
-```
-
-### 📌 Lugar sugerido para insertar la imagen:
-*(Inserta aquí tu imagen después de subirla a GitHub)*
-
----
 
 ## 📌 5. Comandos Utilizados
 
