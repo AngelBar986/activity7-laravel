@@ -14,13 +14,10 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
 
-            $table->string('course_key');
-            $table->string('course_name');
-
-            // Relación: un curso tiene 1 robotics kit
-            $table->foreignId('robotics_kit_id')
-                  ->constrained('robotics_kits')
-                  ->onDelete('cascade');
+            $table->string('name');              // NOMBRE DEL CURSO
+            $table->text('description')->nullable(); // DESCRIPCIÓN
+            $table->integer('duration')->nullable(); // DURACIÓN EN HORAS
+            $table->date('starts_at')->nullable();   // FECHA INICIO
 
             $table->timestamps();
         });

@@ -17,8 +17,8 @@ return new class extends Migration
 
             // Relación: un grupo pertenece a un usuario
             $table->foreignId('user_id')
-                  ->constrained()
-                  ->onDelete('cascade');
+                ->constrained()
+                ->onDelete('cascade');
 
             $table->timestamps();
         });

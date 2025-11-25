@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('kit_code')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
+            $table->integer('price'); // ← ESTA ES LA COLUMNA QUE FALTABA
 
             $table->timestamps();
         });

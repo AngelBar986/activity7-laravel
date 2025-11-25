@@ -7,27 +7,24 @@ use Illuminate\Support\Facades\DB;
 
 class RoboticsKitSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         DB::table('robotics_kits')->insert([
             [
-                'name' => 'StarterKit',
-                'kit_code' => 'SK01',
-                'description' => 'Basic robotics starter kit'
+                'name' => 'Arduino Starter Kit',
+                'description' => 'Kit for beginners in electronics.',
+                'price' => 999
             ],
             [
-                'name' => 'Educational Robotics Kit',
-                'kit_code' => 'ERK01',
-                'description' => 'Kit for programming robots'
+                'name' => 'Raspberry Pi 4 Kit',
+                'description' => 'Complete set for SBC development.',
+                'price' => 1899
             ],
             [
-                'name' => 'Kit5',
-                'kit_code' => 'K500',
-                'description' => 'Advanced robotics kit'
-            ],
+                'name' => 'Lego Mindstorms EV3',
+                'description' => 'Educational robotics with Lego.',
+                'price' => 7499
+            ]
         ]);
     }
 }
