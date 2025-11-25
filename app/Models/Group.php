@@ -5,22 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Group extends Model
 {
     use HasFactory;
 
-    // Campos que se pueden asignar masivamente
     protected $fillable = [
         'name',
-        'email',
-        'password'
+        'user_id'
     ];
 
     /**
-     * Un usuario tiene muchos grupos
+     * Un grupo pertenece a un usuario
      */
-    public function groups()
+    public function user()
     {
-        return $this->hasMany(Group::class);
+        return $this->belongsTo(User::class);
     }
 }

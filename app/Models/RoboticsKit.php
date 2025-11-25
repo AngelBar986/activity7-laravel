@@ -5,22 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class RoboticsKit extends Model
 {
     use HasFactory;
 
-    // Campos que se pueden asignar masivamente
     protected $fillable = [
         'name',
-        'email',
-        'password'
+        'kit_code',
+        'description'
     ];
 
     /**
-     * Un usuario tiene muchos grupos
+     * Un robotics kit tiene muchos cursos
      */
-    public function groups()
+    public function courses()
     {
-        return $this->hasMany(Group::class);
+        return $this->hasMany(Course::class);
     }
 }
