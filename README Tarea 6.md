@@ -85,20 +85,14 @@ git push origin main
 
 ---
 
-## 📌 6. Evidencias  
-*(Pega tus capturas aquí una vez generadas)*
+
 
 ### ✔️ Ejecución del UserSeeder  
-_(Inserta imagen aquí)_
-
 ### ✔️ Ejecución del RoboticsKitSeeder  
-_(Inserta imagen aquí)_
-
 ### ✔️ Ejecución del CourseSeeder con 100 cursos  
-_(Inserta imagen aquí)_
 
-### ✔️ Imagen del diagrama ER  
-_(Inserta imagen aquí)_
+![Evidencias de ejecución](Evidencias.png)
+
 
 ---
 
