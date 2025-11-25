@@ -1,59 +1,138 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Activity 7 – Laravel Project (Eloquent ORM, ERD, Migrations & SQL Export)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este repositorio contiene el desarrollo completo de la **Activity 7**, en la cual se modeló una base de datos mediante **Eloquent ORM**, se construyeron migraciones, modelos, controladores, seeders y se generó un archivo SQL exportado desde la base creada.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📌 1. Descripción
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+El objetivo de esta actividad es crear un sistema para una escuela de robótica que maneje:
+- Usuarios (estudiantes, maestros, administradores)
+- Grupos por nivel
+- Cursos con materiales
+- Kits de robótica  
+- Relaciones entre todos ellos
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📁 2. Contenido del repositorio
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- **app/Models** → Modelos Eloquent  
+- **app/Http/Controllers** → Controladores principales  
+- **database/migrations** → Migraciones con llaves foráneas  
+- **database/seeders** → Seeders con datos iniciales  
+- **activity7.sql** → Archivo SQL exportado  
+- **routes/api.php** → Rutas API  
+- **README.md** → Este documento  
+- ERD incluido en el reporte del estudiante  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🧱 3. Entidades del sistema
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **User** → Rol: estudiante, maestro o administrador  
+- **Group** → beginner, intermediate, advanced  
+- **Course** → Clave, nombre, portada, material, kit  
+- **RoboticsKit** → Kit físico asignado a cursos  
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🔗 4. Relaciones implementadas
 
-## Contributing
+- Un usuario pertenece a un grupo  
+- Un grupo tiene muchos usuarios  
+- Un curso pertenece a un kit  
+- Un grupo puede tener varios cursos  
+- Un curso puede asignarse a varios grupos  
+- Tablas pivot:
+  - `group_user`
+  - `course_group`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🧬 5. Migraciones
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Incluyen:
+- Llaves primarias  
+- Llaves foráneas  
+- Relaciones muchos-a-muchos  
+- Tablas pivot  
+- Campos solicitados en la actividad  
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🧪 6. Seeders
 
-## License
+Generan datos de:
+- Usuarios
+- Grupos
+- Cursos
+- Kits
+- Relaciones entre entidades
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🗄️ 7. Archivo SQL
+
+El archivo:
+
+```
+activity7.sql
+```
+
+Incluye:
+- La estructura completa generada por migraciones  
+- Los datos generados por seeders  
+
+Es el archivo requerido como evidencia final.
+
+---
+
+## ▶️ 8. Cómo ejecutar este proyecto
+
+### 1. Clonar el repositorio
+```
+git clone https://github.com/AngelBar986/activity7-laravel.git
+```
+
+### 2. Entrar al proyecto
+```
+cd activity7-laravel
+```
+
+### 3. Instalar dependencias
+```
+composer install
+```
+
+### 4. Crear archivo .env
+Copiar `.env.example` y renombrarlo a `.env`.
+
+### 5. Generar key del proyecto
+```
+php artisan key:generate
+```
+
+### 6. Configurar base de datos en .env
+
+### 7. Ejecutar migraciones
+```
+php artisan migrate --seed
+```
+
+### 8. Levantar servidor
+```
+php artisan serve
+```
+
+---
+
+## 🖼️ 9. ERD
+
+El diagrama ER debe incluirse en el reporte final, mostrando entidades y relaciones solicitadas.
+
+---
+
+## ✒️ 10. Autor
+
+Proyecto realizado por **Angel David Barrios Díaz** como parte de la Activity 7.
